@@ -1,15 +1,13 @@
 {
   ".env": "a16f9b9f204e44e738080afcfd2366092e7343d47a2f0bb2ded99d5bd3a170a5",
   ".gitignore": "9c845d67b64ad394587dcc8b0918233b93426f76a357618da476d7377a8ff741",
-  "index.js": "75f1ae1cdd36acf0f33ff85f6ab80a6951adbf5ebe867dd69e0014b453c3ca78",
-  "main.html": "2e5aa8ab9c60395f641d671f41059609abce937679e0aec3ae7c73ca24abfd25",
-  "package-lock.json": "387a087d25f35feb524685e79c0947388cf21db2ada644d4bd3e8480aec23faf",
-  "package.json": "c3accf831d924567637f6968d536047815ff00362cd69116f1aa77dc98da561b",
-  "README.md": "25fac2b957edf667ee6c85916b9d379228c7980c1eb0362efaf00fd6efb561ba",
-  "System/Scripts/Components/secure_shield/fetch_hashes.js": "d3e5b1261bb6a562f24ee3ef59c0231fc28da49532f120b29c10713858d1f85c",
+  "gen_hashes.js": "776d7bcc65c0a3a435d9dfeb233418b4d77097787b3966f9efc08be5f756dd43",
+  "index.js": "280226d32c6fbef015125d9c2e19dd6b609bfcb36c25cd80169c853508368965",
+  "main.html": "acfaf0a09f007bfde11a29f47b16eb96d971bcc91864aa02cd441c50ab296755",
+  "package-lock.json": "f1227ca5ab6f20965d936f76f2b7d906e2aecb08b77a2152febf0dc3887498aa",
+  "package.json": "9ec263981214ff585eaf3a11f042fbfc4b5188c794472248eb9f4997adbe9056",
+  "README.md": "b6b69cf135b084f68d27b4f95814048046db18cdbd449f5cd0500889839f9d15",
   "System/Scripts/Components/secure_shield/hash_db.js": "38349e360e2a31f8b2d39b7d4ac111b30248b9d48391071eba49562248cab172",
-  "System/Scripts/Components/secure_shield/secure_shield.js": "fcbeba6bdf6df617db8b864c12a498923c56ecf2e01c3b0d5e96e676b548ab25",
-  "System/Scripts/Components/secure_shield/trusted_hashes.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "System/Scripts/main.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "temp_scan.js": "790d6cb110d79e2ea93d1498a9e572eb1d17c9f93ab6187ce9f3c9c750966df2"
+  "System/Scripts/Components/secure_shield/secure_shield.js": "349a043687bd707b81bc9e736e67adda7b465b73c18f422ba5c00509039bc6cf",
+  "System/Scripts/main.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 }
