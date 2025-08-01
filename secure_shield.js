@@ -75,7 +75,7 @@ async function repairFile({owner, repo, filename, localPath}) {
 function retrieveAllFiles(dir_path, file_array) {
     // Always return an array, even if dir_path is invalid
     if (!file_array) file_array = [];
-    let entries;
+    let entries = [];
     try {
         entries = fs.readdirSync(dir_path);
     } catch (err) {
