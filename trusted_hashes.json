@@ -1,14 +1,13 @@
 {
-  ".env": "a16f9b9f204e44e738080afcfd2366092e7343d47a2f0bb2ded99d5bd3a170a5",
   ".gitignore": "9c845d67b64ad394587dcc8b0918233b93426f76a357618da476d7377a8ff741",
   "gen_hashes.js": "776d7bcc65c0a3a435d9dfeb233418b4d77097787b3966f9efc08be5f756dd43",
-  "index.js": "f653b32eeb3d9bc8a6a9fee92371e8162f2565a73751423cbaee572c2982a832",
+  "index.js": "780d1f76b0c6529418eef189f6c6d734eff4017b1927199b732666fbbfa46143",
   "main.html": "2e5aa8ab9c60395f641d671f41059609abce937679e0aec3ae7c73ca24abfd25",
-  "package-lock.json": "f1227ca5ab6f20965d936f76f2b7d906e2aecb08b77a2152febf0dc3887498aa",
-  "package.json": "9ec263981214ff585eaf3a11f042fbfc4b5188c794472248eb9f4997adbe9056",
+  "package-lock.json": "dfb31e3fa737cf220419b9106c9604906cae7bd9aad77324bd61b7aa34940583",
+  "package.json": "548844c942459a8771c9b3c65b77567c205846072b842cf20cb2b0e6481e4440",
   "README.md": "b6b69cf135b084f68d27b4f95814048046db18cdbd449f5cd0500889839f9d15",
   "sample.txt": "c7a0121fad0a716c1beeb039d1ec8efa9bd2714fde27b8f6e45d908c5d2e32f7",
-  "System/Scripts/Components/secure_shield/hash_db.js": "38349e360e2a31f8b2d39b7d4ac111b30248b9d48391071eba49562248cab172",
-  "System/Scripts/Components/secure_shield/secure_shield.js": "349a043687bd707b81bc9e736e67adda7b465b73c18f422ba5c00509039bc6cf",
-  "System/Scripts/main.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  "System/Scripts/Components/secure_shield/secure_shield.js": "242f7d14d3a2a91f83261558a62e6a7dac4ee4809d14767c4eb776de7ec0bc07",
+  "System/Scripts/main.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "trusted_hashes.json": "cd2bffc71a6ffe9bf6af725561450d9c12c73b7972ef5bf3ea66d65a691bfeb9"
 }
