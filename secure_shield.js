@@ -72,11 +72,25 @@ async function repairFile({owner, repo, filename, localPath}) {
     }
 }
 
-function retrieveAllFiles(dir_path, file_array = []) {
-    const entries = fs.readdirSync(dir_path);
+function retrieveAllFiles(dir_path, file_array) {
+    // Always return an array, even if dir_path is invalid
+    if (!file_array) file_array = [];
+    let entries;
+    try {
+        entries = fs.readdirSync(dir_path);
+    } catch (err) {
+        // Directory does not exist or is not accessible
+        return file_array;
+    }
     for (const entry of entries){
         const fullPath = path.join(dir_path, entry);
-        const stat = fs.statSync(fullPath);
+        let stat;
+        try {
+            stat = fs.statSync(fullPath);
+        } catch (err) {
+            // Skip files that can't be accessed
+            continue;
+        }
         if (stat.isDirectory()){
             if (entry === 'node_modules' || entry === '.git') continue;
             retrieveAllFiles(fullPath, file_array);
