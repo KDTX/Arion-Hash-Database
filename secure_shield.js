@@ -86,7 +86,7 @@ function retrieveAllFiles(dir_path, file_array) {
         const fullPath = path.join(dir_path, entry);
         let stat;
         try {
-            stat = fs.statSync(fullPath);
+            stat = fs.statSync(fullPath);d
         } catch (err) {
             // Skip files that can't be accessed
             continue;
