@@ -157,3 +157,11 @@ try {
   console.error(`[Fatal] Uncaught error: ${fatal.message}`);
   // Optional: trigger fallback or alert here
 }
+
+module.exports = {
+  generateFileHash,
+  retrieveAllFiles,
+  fetchTrustedHashes,
+  repairFile,
+  runFullScan, 
+};
