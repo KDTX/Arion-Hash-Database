@@ -1,12 +1,12 @@
 {
   ".gitignore": "430c26ef6d505eeceb1edee6e5c5962282c66e04adf5be8a13f8ba2d4fc9da56",
   "gen_hashes.js": "776d7bcc65c0a3a435d9dfeb233418b4d77097787b3966f9efc08be5f756dd43",
-  "index.js": "5cfc5fa50bad72f7fdc4a357e11a8d7deb6b5ca3ffc00e3ed2a43d2ad5793190",
+  "index.js": "140eb4afd934da49d2905b28062d61417a0285651e5322e6d67f0b7d5d38f63d",
   "main.html": "3cb829014a68f8a049d0ff7006358dbcffb75cb09b0365e4f2294965a9f363b8",
   "package-lock.json": "dfb31e3fa737cf220419b9106c9604906cae7bd9aad77324bd61b7aa34940583",
   "package.json": "548844c942459a8771c9b3c65b77567c205846072b842cf20cb2b0e6481e4440",
   "README.md": "b6b69cf135b084f68d27b4f95814048046db18cdbd449f5cd0500889839f9d15",
   "sample.txt": "c7a0121fad0a716c1beeb039d1ec8efa9bd2714fde27b8f6e45d908c5d2e32f7",
-  "System/Scripts/Components/secure_shield/secure_shield.js": "68c3cd062910965bb9a952ae74a598deffc14ef22e4512a606781b165a703be5",
+  "System/Scripts/Components/secure_shield/secure_shield.js": "3afcf96909047af104886e8ec05629ed4b1dd141ed2d5b914e68516bbbe61e3a",
   "System/Scripts/main.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 }

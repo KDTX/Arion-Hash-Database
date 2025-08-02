@@ -11,9 +11,9 @@ const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
 
-async function fetchTrustedHashes({ owner, repo, path }) {
+async function fetchTrustedHashes({ owner, repo, path: filePath }) {
     try {
-        const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+        const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
 
         const res = await fetch(url, {
             headers: {
@@ -102,4 +102,68 @@ function generateFileHash(f_path) {
     });
 }
 
-module.exports = { generateFileHash, retrieveAllFiles, fetchTrustedHashes, repairFile };
+// === New: main scan + repair runner inside Secure Shield ===
+async function runFullScan(systemRoot, options = {}) {
+    const { owner, repo, repairSkipFiles = ['.gitignore', 'trusted_hashes.json'] } = options;
+
+    try {
+        const trustedHashes = await fetchTrustedHashes({
+            owner,
+            repo,
+            path: 'trusted_hashes.json'
+        });
+
+        const files = retrieveAllFiles(systemRoot);
+
+        for (const filePath of files) {
+            const relativePath = path.relative(systemRoot, filePath).replace(/\\/g, '/');
+            const filename = path.basename(filePath);
+
+            try {
+                const currentHash = await generateFileHash(filePath);
+                const knownHash = trustedHashes[relativePath];
+
+                if (!knownHash) {
+                    console.warn(`⚠️  [UNREGISTERED] ${relativePath}`);
+                    console.warn(`Please contact KDT Corporation for registering Critical System Files...`);
+                } else if (currentHash !== knownHash) {
+                    console.error(`❌ [MODIFIED] ${relativePath}`);
+
+                    if (repairSkipFiles.includes(filename)) {
+                        console.log(`[SKIP] Skipping the repair of ${relativePath}`);
+                        continue;
+                    }
+
+                    console.log(`🛠️  Initiating repair of ${relativePath} file...`);
+
+                    const repaired = await repairFile({
+                        filename: relativePath,
+                        owner,
+                        repo,
+                        localPath: filePath
+                    });
+
+                    if (repaired) {
+                        console.log(`✅ [REPAIR SUCCESS] ${relativePath}`);
+                    } else {
+                        console.error(`❌ [REPAIR FAILED] ${relativePath}`);
+                    }
+                } else {
+                    console.log(`✅ [CLEAN] ${relativePath}`);
+                }
+            } catch (err) {
+                console.error(`❌ Error reading ${relativePath}: ${err.message}`);
+            }
+        }
+    } catch (err) {
+        console.error(`🚨 Critical failure in runFullScan: ${err.message}`);
+    }
+}
+
+module.exports = {
+    generateFileHash,
+    retrieveAllFiles,
+    fetchTrustedHashes,
+    repairFile,
+    runFullScan,
+};
